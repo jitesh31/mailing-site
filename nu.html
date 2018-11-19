@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Mailing Site</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+      
+	  
+
+<!--Main Navigation-->
+
+
+<html lang="en" class="full-height">
+
+<!--Main Navigation-->
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong>Mailing System</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.jsp">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="view intro-2">
+        <div class="full-bg-img">
+            <div class="mask rgba-indigo-slight flex-center">
+                <div class="container">
+                    <div class="white-text text-center wow fadeInUp">
+                        
+               
+<!-- Material form login -->
+
+<!-- Material form register -->
+<form method="post" action="newuser.jsp" name="f1">
+    <p class="h4 text-center mb-4">Create Your Account</p>
+
+    <!-- Material input text -->
+    <div class="md-form">
+        <i class="fa fa-user prefix grey-text"></i>
+        <input type="email" id="materialFormRegisterNameEx" class="form-control" name="email" autocomplete="off" onkeyup="return validate()">
+        <label for="materialFormRegisterNameEx">Email</label>
+    </div>
+
+    <!-- Material input email -->
+    <div class="md-form">
+        <i class="fa fa-envelope prefix grey-text"></i>
+        <input type="password" id="materialFormRegisterEmailEx" class="form-control" name="pass">
+        <label for="materialFormRegisterEmailEx">Password</label>
+    </div>
+
+    <!-- Material input email -->
+    <div class="md-form">
+        <i class="fa fa-exclamation-triangle prefix grey-text"></i>
+        <input type="text" id="materialFormRegisterConfirmEx" class="form-control" name="uname">
+        <label for="materialFormRegisterConfirmEx">Username</label>
+    </div>
+
+    <!-- Material input password -->
+    <div class="md-form">
+        <i class="fa fa-lock prefix grey-text"></i>
+        <input type="text" id="materialFormRegisterPasswordEx" class="form-control" name="address">
+        <label for="materialFormRegisterPasswordEx">Address</label>
+    </div>
+      
+	  <div class="md-form">
+        <i class="fa fa-exclamation-triangle prefix grey-text"></i>
+        <input type="text" id="materialFormRegisterConfirmEx" class="form-control" name="phone">
+        <label for="materialFormRegisterConfirmEx">Phone</label>
+    </div>
+
+    <div class="text-center mt-4">
+        <button class="btn btn-primary" type="submit">Register</button>
+    </div>
+</form>
+<!-- Material form register -->
+                      <!-- Material form login -->
+                      						
+ </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<!--Main Navigation-->
+
+<!--Main Layout-->
+<!--Main Layout-->
+<!--Main Navigation-->
+
+<!--Main Layout-->
+<!--Main Layout-->
+<!--Main Layout-->
+
+    <!-- Start your project here-->
+    <!-- /Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+	<script>
+function validate(){
+var email=document.f1.email.value;
+var atposition=email.indexOf("@");  
+var dotposition=email.lastIndexOf(".");  
+var pass=document.f1.pass.value;
+var user=document.f1.uname.value;
+var add=document.f1.address.value;
+var phon=document.f1.phone.value;
+  
+  if (atposition<3 || dotposition<atposition+2 || dotposition+2<=email.length){  
+  //alert("Please enter a valid e-mail address" );
+     if(atposition<4){
+  document.getElementById("a").innerHTML="@ can't be less than 4th position";
+  } else if(dotposition<atposition+2){
+  document.getElementById("a").innerHTML="dot position can be two more than the @ position";
+  } else if(dotposition+2>=email.length){
+  document.getElementById("a").innerHTML="dot position can be two less than the last Index";
+  }
+  else{
+	document.getElementById("a").innerHTML="";
+	}
+  return false;
+}
+    if(pass.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+	if (isNaN(phon)){  
+  document.getElementById("e").innerHTML="Enter Numeric value only";  
+  return false;
+}
+}
+
+
+</script>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>
